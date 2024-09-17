@@ -1,4 +1,4 @@
-name: Deploy-Project
+name: needs-job-sequence
 on: push
 jobs:
  Execute-test:
