@@ -1,5 +1,5 @@
-name: needs-job-sequence
-on: push
+name: needs-job-sequence-multiple-triggers
+on: [push, workflow_dispatch]
 jobs:
  Execute-test:
    runs-on: ubuntu-latest
