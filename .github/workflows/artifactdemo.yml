@@ -20,9 +20,11 @@ jobs:
          cd mydemo
          touch file1
          echo "file form github actions" > file1
-         pwd
+         touch file2
      - name: upload artifact on repo
        uses: actions/upload-artifact@v3
        with:
           name: files
-          path: /home/runner/work/GithubActions-NodeJs-Demo/GithubActions-NodeJs-Demo/mydemo/file1
+          path: |
+            ./mydemo/file2
+            
