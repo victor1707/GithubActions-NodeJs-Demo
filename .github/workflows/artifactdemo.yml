@@ -1,4 +1,4 @@
-name: needs-job-sequence-multiple-triggers
+name: artifact-demo
 on: workflow_dispatch
 jobs:
  Execute-test:
