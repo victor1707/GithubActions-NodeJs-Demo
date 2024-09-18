@@ -20,3 +20,8 @@ jobs:
          cd mydemo
          touch file1
          echo "file form github actions" > file1
+     - name: upload artifact on repo
+       uses: actions/upload-artifact@v3
+       with:
+          name: files
+          path: /mydemo/file1
