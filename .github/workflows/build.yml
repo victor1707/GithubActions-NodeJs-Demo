@@ -4,9 +4,6 @@ on:
  push:
   branches:
    - master 
-  branches-ignore:
-   - dev 
-   - test
  pull_request:
   branches:
    - master
