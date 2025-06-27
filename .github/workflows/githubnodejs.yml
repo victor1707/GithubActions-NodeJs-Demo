@@ -1,0 +1,33 @@
+---
+
+name: build nodejs application
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    branch_ignore:
+      - dev
+      - test
+  pull_request:
+    branches:
+      -master
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone the repo
+        uses: actions/checkout@v4
+      - name: install nodejs
+        uses: actions/setup-node@v4
+        with: 
+            node-version: 18
+            cache: 'npm'
+      - name: install dependencies
+        run: npm ci
+      - name: execute test cases
+        run: npm test
+      - name: build the code
+        run: npm run build
+      - name: deploy the code:
+        run: echo 'deploy the code'
